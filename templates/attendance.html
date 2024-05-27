@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>user page</title>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link> -->
+        <!-- Favicon-->
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="http://127.0.0.1:5000/static/css/styles.css" rel="stylesheet" />
+        <style>
+            #Box{
+                padding: 25px;
+                background-color: white;
+                height: auto;
+                margin-top: 150px;
+            }
+            #Box p{
+                text-align: justify;
+                font-size: 20px;
+            }
+            body{
+                background-image: url('data:image/jpeg;base64,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');
+                color: #3b3b3b;
+                font-family: Georgia,"Times New Roman",Times,serif;
+            }
+            fieldset{
+                position: relative;
+                border: 1px solid #ddd;
+                margin-bottom: 25px;
+                padding-top: 60px;
+                line-height: 1.5;
+                font-size: 20px;
+            }
+            fieldset legend{
+                background-color: #ddd;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 10px;
+            }
+            fieldset label:nth-child(1){
+                display: inline-block;
+                margin-top: 20px;
+                font-weight: bold;
+            }
+            h1{
+                font-weight: 100;
+            }
+            #Form input, #Form select{
+                margin-bottom: 10px;
+            }
+            h3{
+              text-align: center;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <!-- <li class="nav-item"><a class="nav-link" href="#page-top">AUTISM</a></li> -->
+                <a class="navbar-brand h1" href="/home"><span style="color: gold;"> Shikshakendra</span>-The Epitome of Educational Elegance</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                      <li class="nav-item"><a class="nav-link" href="/shome">Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/create_datsets">Attendance</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/chatbot">Chatbot</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <div id="Box">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="portfolio-info">
+                    <h3>Create Student Details</h3>
+                    <hr>
+                    <form action="/create_datsets" method="POST" id="Form">
+                      <div class="form-group">
+                        <!-- <label for="Id"></label> -->
+                        <input type="text" class="form-control" id="Id" name="Id" value="{{ID}}" readonly>
+                      </div>
+                      <div class="form-group">
+                        <!-- <label for="Name">:</label> -->
+                        <input type="text" placeholder="Student Name" class="form-control" id="Name" name="Name">
+                      </div>
+                      <div class="form-group">
+                        <!-- <label for="Phone">:</label> -->
+                        <input type="tel" placeholder="Phone No." class="form-control" id="Phone" name="Phone">
+                      </div>
+                      <div class="form-group">
+                        <!-- <label for="Email">:</label> -->
+                        <input type="email" placeholder="Email Id" class="form-control" id="Email" name="Email">
+                      </div>
+                      <div class="form-group">
+                        <!-- <label for="pwd">Semester:</label> -->
+                          <select name="Sem" id="Sem" class="form-control">
+                              <option value="1st">1st semester</option>
+                              <option value="2nd">2nd semester</option>
+                              <option value="3rd">3rd semester</option>
+                              <option value="4th">4th semester</option>
+                              <option value="5th">5th semester</option>
+                              <option value="6th">6th semester</option>
+                              <option value="7th">7th semester</option>
+                              <option value="8th">8th semester</option>
+                             
+                          </select>
+                      </div>
+                      <div class="form-group">
+                        <!-- <label for="pwd">Branch:</label> -->
+                          <select name="Cource" id="Cource" class="form-control">
+                              <option value="MBA">MBA</option>
+                              <option value="be">B.Tech</option>
+                              <option value="mt">M.Tech</option>
+                              
+      
+                          </select>
+                      </div>
+                      <div class="form-group">
+                        <!-- <label for="pwd">Branch:</label> -->
+                          <select name="Branch" id="Branch" class="form-control">
+                              <option value="ADS">Airtificial Intelligence and Data Science</option>
+                              <option value="CS">Computer Science & Engineering</option>
+                              <option value="CE">Civil Engineering</option>
+                              <option value="ME">Mechanical Engineering</option>
+                              <option value="EC">Electronics & Communication</option>
+                              <option value="EE">Electrical & Electronics Engineering</option>
+                          </select>
+                      </div>
+                      <button type="submit" class="btn btn-success form-control">Submit</button>
+                    </form>
+        
+                  </div>
+                </div>
+                
+                <div class="col-lg-6">
+                  <div class="portfolio-info">
+                    <h3>Take Attendence</h3>
+                    <hr>
+                    <form action="/attendence" method="POST" style="display: flex;justify-content: space-between;" >
+                      <!-- <label for="pwd">Semester:</label> -->
+                        <select name="Subject" id="Subject" class="form-control" style="width: 85%;">
+                            
+                            <option value="CGAIP">Computer Graphics And Image Processing</option>
+                            <option value="CD">Compiler Design</option>
+                            <option value="Python">Python</option>
+                            <option value="AAAD">Algorithm Analysis And Design</option>
+                            <option value="IEFT">Industrial Economics And Foreign Trade</option>
+                            <option value="Network LAB">Network LAB</option>
+                            <option value="Mini Project LAB">Mini Project LAB</option>
+                            <option value="Python LAB">Python LAB</option>
+                        </select>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+
+                    <br><br>
+                    <h3>Updates</h3>
+                    <hr>
+                    {% if msg %}
+                      {% for mg in msg %}
+                      <h4>{{mg}}</h4>
+                      {% endfor %}
+                    {% endif %}
+      
+                    {% if List %}
+                      <h4>Subject: {{ subject }}</h4>
+                      <h4>Date: {{ date }}</h4>
+                      <h4>Time: {{ time }}</h4>
+                      {% for i in List %}
+                      <h4>{{i}}</h4>
+                      {% endfor %}
+                    {% endif %}
+      
+                  </div>
+                </div>
+
+                </div>
+                
+            </div>
+        </div>
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="http://127.0.0.1:5000/static/js/scripts.js"></script>
+        
+    </body>
+</html>

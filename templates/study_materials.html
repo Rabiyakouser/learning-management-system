@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta required name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta required name="description" content="" />
+        <meta required name="author" content="" />
+        <title>js</title>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link> -->
+        <!-- Favicon-->
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="http://127.0.0.1:5000/static/css/styles.css" rel="stylesheet" />
+        <style>
+            #Box{
+                padding: 25px;
+                background-color: white;
+                height: auto;
+            }
+            #row{
+                margin-top:150px;
+            }
+            body{
+                background-color: aliceblue;
+            }
+            #Box img{
+                width: 100%;
+                height: 200px;
+                border: 2px solid #ddd;
+                padding: 20px;
+                cursor: pointer;
+                transition: transform 0.1s 0.1s;
+            }
+            #Box img:hover{
+                transform: scale(1.1);
+            }
+            body{
+                background-image: url('data:image/jpeg;base64,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');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            form{
+                border: 1px solid #ddd;
+                padding: 25px;
+                color: black;
+            }
+            form ol li{
+                margin-top: 10px;
+            }
+            iframe{
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <!-- <li class="nav-item"><a class="nav-link" href="#page-top">AUTISM</a></li> -->
+                <a class="navbar-brand h1" href="/user"> <span style="color: gold;"> Shikshakendra</span>-The Epitome of Educational Elegance</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/shome">Home</a></li>
+                      
+                        <li class="nav-item"><a class="nav-link" href="/chatbot">Chatbot</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container"  id="row">
+            <div id="Box">
+                <h4>{{title}}</h4>
+                    {% if pdf %}
+                        
+                        <div class="row">
+                            {% for file in pdf %}
+                            <div class="col-lg-4"><embed src="http://127.0.0.1:5000/static/pdf/{{file[2]}}" style="width: 100%;height: 500px;"><br>
+                                {% set File = file[2] %}
+                            <a href="{{url_for('Readfile', File = File)}}">Listen</a>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    {% else %}
+                    <div class="container">
+                        <div class="alert alert-success alert-dismissible" style="width: 50%;margin: auto;">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>pdf data not found</strong> 
+                        </div>
+                    </div>
+                    {% endif %}
+                    <br><br>
+                    {% if audio %}
+                    
+                        <div class="row">
+                            {% for file in audio %}
+                                <div class="col-lg-4"><audio controls style="width: 100%;">
+                                    <source src="http://127.0.0.1:5000/static/audio/{{file[2]}}"></source>
+                                </audio></div>
+                        {% endfor %}
+                        </div>
+                        {% else %}
+                        <div class="container">
+                            <div class="alert alert-success alert-dismissible" style="width: 50%;margin: auto;">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>audio data not found</strong> 
+                            </div>
+                        </div>
+                    {% endif %}
+            </div>
+        </div>
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="http://127.0.0.1:5000/static/js/scripts.js"></script>
+        
+    </body>
+</html>
